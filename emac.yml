@@ -1,10 +1,10 @@
 environment:
   matrix:
-  - emacs: "24"
-  - emacs: "25"
+  - emacs: 24
+  - emacs: 25
 
 install:
-  - ps: switch($emacs){ "24" {choco install emacs} "25" {choco install emacs64} default {echo "Emacs install fail"}}
+  - ps: switch($emacs){ 24 {choco install emacs} 25 {choco install emacs64} default {echo "Emacs install fail"}}
   - refreshenv
 
 build: off
