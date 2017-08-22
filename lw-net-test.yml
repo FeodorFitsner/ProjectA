@@ -19,10 +19,11 @@ install:
 - choco install openssh -confirm
 #- choco install gradle
 - ps stop-job $job
-#- appveyor PushArtifact c:\dump.txt
+- ps stop-job 1 -ErrorAction Ignore
+- appveyor-retry appveyor PushArtifact dump.txt
 
-artifacts:
-  - path: dump.txt
+#artifacts:
+ # - path: dump.txt
 
 build: off
 test: off
