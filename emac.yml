@@ -1,4 +1,5 @@
-matrix:
+environment:
+  matrix:
   - emacs: 24
   - emacs: 25
 
