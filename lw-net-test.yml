@@ -18,7 +18,7 @@ install:
 - ps: start-job {C:\projects\projecta\WinDump.exe > c:\dump.txt}
 - choco install openssh -confirm
 #- choco install gradle
-- type c:\dump.txt
+- appveyor PushArtifact c:\dump.txt
 
 build: off
 test: off
