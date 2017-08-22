@@ -4,10 +4,10 @@ environment:
   - emacs: 25
 
 install:
-  - ps: write-host $emacs
-  - ps: $emacs -eq 24
-  - ps: $emacs -eq 25
-  - ps: switch($emacs){ 24 {choco install emacs} 25 {choco install emacs64} default {echo "Emacs install fail"}}
+  - ps: write-host $env:emacs
+  - ps: $env:emacs -eq 24
+  - ps: $emv:emacs -eq 25
+  - ps: switch($env:emacs){ 24 {choco install emacs} 25 {choco install emacs64} default {echo "Emacs install fail"}}
   - refreshenv
 
 build: off
