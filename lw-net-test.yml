@@ -15,9 +15,10 @@ environment:
 install:
 - choco install winpcap
 - appveyor downloadfile https://www.winpcap.org/windump/install/bin/windump_3_9_5/WinDump.exe
-- ps: start-job {C:\projects\projecta\WinDump.exe > c:\dump.txt}
+- ps: $job = start-job {C:\projects\projecta\WinDump.exe > c:\dump.txt}
 - choco install openssh -confirm
 #- choco install gradle
+- ps stop-job $job
 - appveyor PushArtifact c:\dump.txt
 
 build: off
