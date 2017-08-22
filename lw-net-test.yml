@@ -22,7 +22,6 @@ install:
 
 #- ps: stop-job $job
 #- ps: stop-job 1 -ErrorAction Ignore
-- appveyor PushArtifact c:\programdata\chocolatey\logs\chocolatey.log
 
 #artifacts:
  # - path: dump.txt
@@ -31,4 +30,5 @@ build: off
 test: off
 
 on_finish:
+- appveyor PushArtifact c:\programdata\chocolatey\logs\chocolatey.log
 #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
