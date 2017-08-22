@@ -1,0 +1,27 @@
+init:
+- ps: if ((New-Object Net.WebClient).DownloadString('https://www.appveyor.com/tools/my-ip.aspx').Trim() -ne "67.225.139.254") {Exit-AppveyorBuild}
+
+environment:
+  APPVEYOR_RDP_PASSWORD:
+    secure: dNPsSiN7aAwAe2K7Aw+IVw==
+  matrix:
+  - TRY: 1
+  - TRY: 2
+  - TRY: 3
+  - TRY: 4
+  - TRY: 5
+  - TRY: 6
+
+install:
+- choco install winpcap
+- appveyor downloadfile https://www.winpcap.org/windump/install/bin/windump_3_9_5/WinDump.exe
+- ps: start-job {C:\projects\projecta\WinDump.exe > c:\dump.txt}
+- choco install openssh -confirm
+#- choco install gradle
+- type c:\dump.txt
+
+build: off
+test: off
+
+on_finish:
+#- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
