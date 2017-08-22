@@ -22,7 +22,7 @@ install:
 
 #- ps: stop-job $job
 #- ps: stop-job 1 -ErrorAction Ignore
-#- appveyor-retry appveyor PushArtifact dump.txt
+- appveyor PushArtifact c:\programdata\chocolatey\logs\chocolatey.log
 
 #artifacts:
  # - path: dump.txt
