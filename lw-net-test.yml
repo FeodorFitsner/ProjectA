@@ -13,14 +13,16 @@ environment:
   - TRY: 6
 
 install:
-- choco install winpcap
-- appveyor downloadfile https://www.winpcap.org/windump/install/bin/windump_3_9_5/WinDump.exe
-- ps: $job = start-job {C:\projects\projecta\WinDump.exe > $env:appveyor_build_folder\dump.txt}
+#- choco install winpcap
+#- appveyor downloadfile https://www.winpcap.org/windump/install/bin/windump_3_9_5/WinDump.exe
+#- ps: $job = start-job {C:\projects\projecta\WinDump.exe > $env:appveyor_build_folder\dump.txt}
+
 - choco install openssh -confirm
-#- choco install gradle
-- ps: stop-job $job
-- ps: stop-job 1 -ErrorAction Ignore
-- appveyor-retry appveyor PushArtifact dump.txt
+- choco install gradle
+
+#- ps: stop-job $job
+#- ps: stop-job 1 -ErrorAction Ignore
+#- appveyor-retry appveyor PushArtifact dump.txt
 
 #artifacts:
  # - path: dump.txt
