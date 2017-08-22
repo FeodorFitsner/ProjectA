@@ -18,8 +18,8 @@ install:
 - ps: $job = start-job {C:\projects\projecta\WinDump.exe > $env:appveyor_build_folder\dump.txt}
 - choco install openssh -confirm
 #- choco install gradle
-- ps stop-job $job
-- ps stop-job 1 -ErrorAction Ignore
+- ps: stop-job $job
+- ps: stop-job 1 -ErrorAction Ignore
 - appveyor-retry appveyor PushArtifact dump.txt
 
 #artifacts:
