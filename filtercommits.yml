@@ -24,8 +24,8 @@
 #  deploy: off
 
 
-#skip_commits:
-#  message: /upd.+/
+skip_commits:
+  message: bla
 
 #skip_commits:
 #  author: IlyaFinkelshteyn
@@ -42,7 +42,7 @@
 #only_commits:
 #  author: IlyaFinkelshteyn2
 
-only_commits:
-  files:
-    - docs/*
-    - '**/*.html'
+#only_commits:
+#  files:
+#    - docs/*
+#    - '**/*.html'
