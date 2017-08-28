@@ -11,6 +11,8 @@ environment:
   - TRY: 4
   - TRY: 5
   - TRY: 6
+  - TRY: 7
+  - TRY: 8
 
 install:
 #- choco install winpcap
