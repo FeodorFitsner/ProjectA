@@ -1,18 +1,32 @@
+#configuration:
+#- Debug
+#- Release
+
+#environment:
+#  matrix:  
+    - EXCLUDETESTS: solver
+    - EXCLUDETESTS:
+
+#matrix:
+#  exclude:
+#    - configuration: Release
+#      EXCLUDETESTS: solver
+#    - configuration: Debug
+#      EXCLUDETESTS:
+
 configuration:
 - Debug
 - Release
 
 environment:
-  matrix:  
-    - EXCLUDETESTS: solver
-    - EXCLUDETESTS:
+  matrix:
+    - MY_VAR: A
+    - MY_VAR: B
 
 matrix:
   exclude:
-    - configuration: Release
-      EXCLUDETESTS: solver
     - configuration: Debug
-      EXCLUDETESTS:
-      
+      MY_VAR: B
+
 build: off
 test: off
