@@ -6,7 +6,6 @@ matrix:
   - MY_VAR: A
   - MY_VAR: B
 
-matrix:
   exclude:
     - configuration: Debug
       MY_VAR: B
