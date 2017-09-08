@@ -5,6 +5,7 @@ configuration:
 environment:
   matrix:  
     - EXCLUDETESTS: solver
+    - EXCLUDETESTS: 
 
 #matrix:
 #  exclude:
