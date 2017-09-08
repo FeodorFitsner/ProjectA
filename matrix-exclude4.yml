@@ -6,10 +6,10 @@ environment:
   matrix:  
     - EXCLUDETESTS: solver
 
-matrix:
-  exclude:
-    - configuration: Release
-      EXCLUDETESTS: solver
+#matrix:
+#  exclude:
+#    - configuration: Release
+#      EXCLUDETESTS: solver
       
 build: off
 test: off
