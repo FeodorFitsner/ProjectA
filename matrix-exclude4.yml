@@ -2,13 +2,14 @@ configuration:
 - Debug
 - Release
 
-matrix:
-  - MY_VAR: A
-  - MY_VAR: B
+environment:
+  matrix:  
+    - EXCLUDETESTS: solver
 
+matrix:
   exclude:
-    - configuration: Debug
-      MY_VAR: B
+    - configuration: Release
+      EXCLUDETESTS: solver
       
 build: off
 test: off
