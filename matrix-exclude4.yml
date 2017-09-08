@@ -5,12 +5,14 @@ configuration:
 environment:
   matrix:  
     - EXCLUDETESTS: solver
-    - EXCLUDETESTS: 
+    - EXCLUDETESTS:
 
-#matrix:
-#  exclude:
-#    - configuration: Release
-#      EXCLUDETESTS: solver
+matrix:
+  exclude:
+    - configuration: Release
+      EXCLUDETESTS: solver
+    - configuration: Debug
+      EXCLUDETESTS:
       
 build: off
 test: off
