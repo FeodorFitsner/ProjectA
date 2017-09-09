@@ -1,0 +1,4 @@
+build: off
+test: off
+install:
+- echo subfolder.yml
