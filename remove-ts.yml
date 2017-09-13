@@ -1,0 +1,17 @@
+version: '{branch}-{build}'
+install:
+- ps: Write-Host "Uninstalling TypeScript 2.4.1 for Visual Studio 2015..." -ForegroundColor Cyan
+- wmic product where name="TypeScript Tools for Microsoft Visual Studio 2015 2.4.1.0" call uninstall
+- ps: | 
+    Write-Host "Installing TypeScript 2.2 for Visual Studio 2015..." -ForegroundColor Cyan
+    Write-Host "Downloading..."
+    $exePath = "$env:USERPROFILE\TypeScript_Dev14Full.exe"
+    (New-Object Net.WebClient).DownloadFile('https://visualstudiogallery.msdn.microsoft.com/26807d6b-37cf-4ccb-9838-086625924b33/file/249189/1/TypeScript_Dev14Full.exe', $exePath)
+    Write-Host "Installing..."
+    cmd /c start /wait $exePath /Q
+    del $exePath
+    Write-Host "TypeScript 2.2 for Visual Studio 2015 installed" -ForegroundColor Green
+build: off
+test: off
+on_finish:
+- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
