@@ -1,7 +1,7 @@
 version: '{branch}-{build}'
 install:
 - ps: Write-Host "Uninstalling current version of TypeScript for Visual Studio 2015..." -ForegroundColor Cyan
-- wmic product where name="TypeScript Tools for Microsoft Visual Studio 2015" call uninstall
+- wmic product where name="TypeScript Tools for Microsoft Visual Studio 2015" call uninstall /nointeractive
 - ps: | 
     Write-Host "Installing TypeScript 2.2 for Visual Studio 2015..." -ForegroundColor Cyan
     Write-Host "Downloading..."
