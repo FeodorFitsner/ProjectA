@@ -7,4 +7,5 @@ install:
   - secure-file\tools\secure-file -decrypt AzureRmProfileContext.txt.enc -secret %my_secret%
 
 build_script:  
-  - ps: Import-AzureRmContext -Path  $env:APPVEYOR_BUILD_FOLDER\AzureRmProfileContext.txt 
+  - ps: Import-AzureRmContext -Path  $env:APPVEYOR_BUILD_FOLDER\AzureRmProfileContext.txt
+  - ps: Get-AzureRmAppServicePlan
