@@ -8,6 +8,5 @@ install:
 
 build_script:  
   - ps: Import-AzureRmContext -Path  $env:APPVEYOR_BUILD_FOLDER\AzureRmProfileContext.txt
-  
-  - ps: Login-AzureRMAccount
+  - ps: Select-AzureRmSubscription -SubscriptionName "Pay-As-You-Go"
   - ps: Get-AzureRmAppServicePlan
