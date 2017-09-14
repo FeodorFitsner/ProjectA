@@ -1,0 +1,10 @@
+environment:
+  my_secret:
+    secure: Bul531Cv8dM8YxZxLqVF5w==
+
+install:  
+  - nuget install secure-file -ExcludeVersion
+  - secure-file\tools\secure-file -decrypt AzureRmProfileContext.json.enc -secret %my_secret%
+
+build_script:  
+  - ps: Import-AzureRmContext -Path  $env:APPVEYOR_BUILD_FOLDER\AzureRmProfileContext.json 
