@@ -1,0 +1,9 @@
+install:
+  - ps: Invoke-WebRequest -Uri 'https://aka.ms/cosmosdb-emulator' -OutFile 'cosmos-db.msi'
+  - start /wait msiexec /i cosmos-db.msi /qn /quiet /norestart /log install.log
+  #- "\"C:\\Program Files\\Azure Cosmos DB Emulator\\CosmosDB.Emulator.exe\" /NoUI /NoExplorer /NoFirewall" # TODO: Fix once this has been resolved: http://help.appveyor.com/discussions/problems/7950-unable-to-laucnh-cosmosdb-emulator
+  - ps: Set-Content -Value '"C:\Program Files\Azure Cosmos DB Emulator\CosmosDB.Emulator.exe" /NoUI /NoExplorer /NoFirewall' -Path .\startCosmosDb.cmd
+  - type startCosmosDb.cmd
+  
+build: off
+test: off
