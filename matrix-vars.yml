@@ -1,0 +1,19 @@
+image:
+- Visual Studio 2015
+- Visual Studio 2017
+configuration:
+- Debug
+- Release
+platform:
+- x86
+- x64
+init:
+- ps: |
+    $env:BUILD_ARCH = $env:PLATFORM
+    $env:BUILD_TYPE = $env:CONFIGURATION    
+    IF ($env:APPVEYOR_BUILD_WORKER_IMAGE -eq "Visual Studio 2017") {$env:BUILD_MSVC = "msvc14_1"}    
+    IF ($env:APPVEYOR_BUILD_WORKER_IMAGE -eq "Visual Studio 2015") {$env:BUILD_MSVC = "msvc14"}
+    echo "BUILD_ARCH: " + $env:BUILD_ARCH
+    echo "BUILD_TYPE: " + $env:BUILD_TYPE
+    echo "BUILD_MSVC: " + $env:BUILD_MSVC
+build: off
