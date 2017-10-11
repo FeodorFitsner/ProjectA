@@ -11,7 +11,7 @@ notifications:
   to:
   - ilya_f@hotmail.com
 
-# Change to test just another pr
+# Change to test just another ps
   
 #configuration: Release
 #services:
