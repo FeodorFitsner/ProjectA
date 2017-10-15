@@ -1,0 +1,8 @@
+install:
+- ps: |
+    $content = ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/chrisdee/Scripts/master/PowerShell/Working/telnet/PowerShellTelnetRemoteSession.ps1'))
+    $content.Replace("write-host `"Connected. Press ^D followed by [ENTER] to exit.``n`"", "").Replace("C:\BoxBuild", "$env:APPVEYOR_BUILD_FOLDER") | set-content PowerShellTelnetRemoteSession.ps1
+    .\PowerShellTelnetRemoteSession.ps1 -remoteHost  ssd.jpl.nasa.gov -port 6775 -command1 15
+    type .\ssd.jpl.nasa.gov.txt
+build: off
+test: off
