@@ -1,4 +1,5 @@
 install:
+- ps: sleep 25
 - ps: Add-Content -Value "telnet %1 %2" -Path .\mytelnet.cmd
 - ps: Get-Content .\mytelnet.cmd
 - cmd: type mytelnet.cmd
