@@ -1,0 +1,7 @@
+install:
+- ps: Add-Content -Value "telnet %1 %2" -Path .\mytelnet.cmd
+- ps: Get-Content .\mytelnet.cmd
+- cmd: type mytelnet.cmd
+- cmd: mytelnet.cmd ssd.jpl.nasa.gov 6775
+
+build: off
