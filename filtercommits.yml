@@ -30,7 +30,7 @@ init:
 #  message: bla2
 
 skip_commits:
-  message: /*bla2*/
+  message: /bla2/
 
 #skip_commits:
 #  author: IlyaFinkelshteyn
