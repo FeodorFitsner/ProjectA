@@ -29,8 +29,8 @@ init:
 #skip_commits:
 #  message: bla2
 
-skip_commits:
-  message: /bla2/
+#skip_commits:
+#  message: /bla2/
 
 #skip_commits:
 #  author: IlyaFinkelshteyn
@@ -43,6 +43,10 @@ skip_commits:
 
 #only_commits:
 #  message: /csasasho.+/
+
+only_commits:
+  message: /bla2/
+
 
 #only_commits:
 #  author: IlyaFinkelshteyn2
