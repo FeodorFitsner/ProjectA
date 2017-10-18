@@ -1,3 +1,5 @@
+init:
+- echo "filtercommits.yml"
 #-
 #  version: 1.0.{build}
 #  clone_script:
