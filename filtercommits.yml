@@ -50,7 +50,7 @@ test: off
 #  message: /csasasho.+/
 
 only_commits:
-  message: /bla2/
+  message: bla2
 
 #only_commits:
 #  author: IlyaFinkelshteyn2
