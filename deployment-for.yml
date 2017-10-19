@@ -1,0 +1,38 @@
+install:
+  - ps: write-host "common"
+
+build: off
+test: off
+
+deploy: off
+
+for:
+  -
+    branches:
+      only:
+        - dev        
+
+    environment:
+      current_br: dev
+      
+    build_script:
+      - ps: write-host "$env:current_br"
+
+  -
+    branches:
+      only:
+        - master
+
+    environment:
+      current_br: master
+      
+    build_script:
+      - ps: write-host "$env:current_br"
+      
+    deploy:
+      - provider: WebDeploy
+        server: a
+        website: b
+        username: c
+        password:
+          secure: +X97f85sCI9/aD39ARTcVQ==
