@@ -16,7 +16,7 @@ for:
     environment:
       current_br: dev
       
-    install_script:
+    install:
       - ps: write-host "$env:current_br"
 
   -
@@ -27,7 +27,7 @@ for:
     environment:
       current_br: master
       
-    install_script:
+    install:
       - ps: write-host "$env:current_br"
     
     build:
