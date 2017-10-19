@@ -43,5 +43,6 @@ for:
         server: a
         website: b
         username: c
+        artifact: bla
         password:
           secure: +X97f85sCI9/aD39ARTcVQ==
