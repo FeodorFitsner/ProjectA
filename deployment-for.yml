@@ -2,6 +2,7 @@ install:
   - ps: write-host "common"
 
 build: off
+
 test: off
 
 deploy: off
@@ -15,7 +16,7 @@ for:
     environment:
       current_br: dev
       
-    build_script:
+    install_script:
       - ps: write-host "$env:current_br"
 
   -
@@ -26,8 +27,11 @@ for:
     environment:
       current_br: master
       
-    build_script:
+    install_script:
       - ps: write-host "$env:current_br"
+    
+    build:
+      verbosity: minimal
       
     deploy:
       - provider: WebDeploy
