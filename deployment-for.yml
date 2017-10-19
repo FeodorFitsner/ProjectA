@@ -1,4 +1,4 @@
-install:
+init:
   - ps: write-host "common"
 
 build: off
