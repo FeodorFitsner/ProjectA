@@ -1,5 +1,10 @@
 init:
 - echo "filtercommits.yml"
+clone_script:
+- cmd: echo "skip clone"
+build: off
+test: off
+
 #-
 #  version: 1.0.{build}
 #  clone_script:
@@ -46,7 +51,6 @@ init:
 
 only_commits:
   message: /bla2/
-
 
 #only_commits:
 #  author: IlyaFinkelshteyn2
