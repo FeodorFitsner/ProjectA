@@ -32,7 +32,12 @@ for:
     
     build:
       verbosity: minimal
-      
+    
+    test:
+      categories:
+        only:
+        - bla
+    
     deploy:
       - provider: WebDeploy
         server: a
