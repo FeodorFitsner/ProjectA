@@ -34,8 +34,8 @@ test: off
 #skip_commits:
 #  message: bla2
 
-#skip_commits:
-#  message: /bla2/
+skip_commits:
+  message: /bla2/
 
 #skip_commits:
 #  author: IlyaFinkelshteyn
@@ -49,8 +49,8 @@ test: off
 #only_commits:
 #  message: /csasasho.+/
 
-only_commits:
-  message: bla2
+#only_commits:
+#  message: bla2
 
 #only_commits:
 #  author: IlyaFinkelshteyn2
