@@ -1,0 +1,8 @@
+version: 33.464.{build}
+build: off
+test: off
+artifacts:
+- path: src\ProjectA
+deploy:
+- provider: Environment
+  name: FTP1
