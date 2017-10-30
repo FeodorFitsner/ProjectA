@@ -11,7 +11,7 @@ notifications:
   to:
   - ilya_f@hotmail.com
 
-Change to test multi-line commit 2
+Change to test comment in message
   
 #configuration: Release
 #services:
