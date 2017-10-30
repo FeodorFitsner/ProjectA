@@ -11,7 +11,7 @@ notifications:
   to:
   - ilya_f@hotmail.com
 
-# Change to test [skip ci] on new line
+Change to test [skip ci] on new line (notification)
   
 #configuration: Release
 #services:
