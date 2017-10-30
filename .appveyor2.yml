@@ -11,7 +11,7 @@ notifications:
   to:
   - ilya_f@hotmail.com
 
-Change to test [skip ci] on new line (notification)
+Change to test multi-line commit 2
   
 #configuration: Release
 #services:
