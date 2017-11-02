@@ -2,3 +2,4 @@ install:
 - cmd: cd c:\ && dir /s ResGen.exe
 build: off
 
+test 1
