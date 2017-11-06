@@ -10,6 +10,9 @@ namespace MyExecutable
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(System.Environment.GetEnvironmentVariable("windir"));
+            Console.WriteLine(System.Environment.GetEnvironmentVariable("APPVEYOR_BUILD_NUMBER"));
+            Console.WriteLine(System.Environment.GetEnvironmentVariable("MY_KEY"));
         }
     }
 }
