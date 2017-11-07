@@ -1,6 +1,5 @@
 environment:
-  global:
-    b: glob
+  b: glob
   matrix:
   - b: b
   - c: c
