@@ -3,12 +3,13 @@
 image: Visual Studio 2017
 on_finish:
   - ps: |
-      iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+      #iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+      $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
       sleep 3000
 build: false
 environment:
   debug_artifacts: '_debug'
-  APPVEYOR_RDP_PASSWORD: Password123!
+  #APPVEYOR_RDP_PASSWORD: Password123!
 test_script:
   - ps: |
       net.exe user /add wtf "Password123!" /Y
