@@ -1,5 +1,6 @@
 environment:
-  a: a-non-glog
+  global:
+    a: a-glob
   matrix:
   - b: b
   - c: c
