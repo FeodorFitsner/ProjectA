@@ -6,7 +6,7 @@ init:
 build: false
 environment:
   debug_artifacts: '_debug'
-  APPVEYOR_RDP_PASSWORD: Password123
+  APPVEYOR_RDP_PASSWORD: Password123!
 test_script:
   - ps: |
       net.exe user /add wtf "Password123!" /Y
