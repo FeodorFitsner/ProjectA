@@ -11,7 +11,7 @@ notifications:
   to:
   - ilya_f@hotmail.com
 
-# test 2
+# test pr
   
 #configuration: Release
 #services:
