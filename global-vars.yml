@@ -1,0 +1,8 @@
+environment:
+  a: a
+  matrix:
+  - b: b
+  - c: c
+build_script:
+- ps: write-host "$env:a $env:b $env:c"
+test: off
